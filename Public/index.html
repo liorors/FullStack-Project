@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Usage Chart</title>
+    <!-- Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0"></script>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>AWS Instance CPU Usage</h1> <!-- the header -->
+    <div class="form-group">
+        <label for="time-period">Time period:</label> 
+        <select id="time-period">
+            <!-- dropdown to select time period -->
+            <option value="3600">Last Hour</option>
+            <option value="86400" selected>Last Day</option>
+            <option value="604800">Last Week</option>
+        </select>
+    </div>
+
+    <!-- Setting interval -->
+    <div class="form-group">
+        <label for="period">Period:</label> 
+        <input type="number" id="interval" value="3600"> 
+    </div>
+
+    <!-- Entering IP address and loading data -->
+    <div class="form-group">
+        <label for="ip">IP Address:</label> 
+        <input type="text" id="ip" value="172.31.88.161">
+        <button id="loadButton">Load</button> <!-- Button to load data -->
+    </div>
+
+    <canvas id="cpuChart" width="800" height="400"></canvas> <!-- Chart canvas -->
+    <script src="script.js"></script>
+</body>
+</html>

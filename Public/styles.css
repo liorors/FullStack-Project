@@ -1,0 +1,35 @@
+/*  for body */
+body {
+    font-family: Times New Roman;
+    margin: 20px;
+    padding: 0;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 5px;
+}
+
+input, select {
+    margin-right: 10px;
+    padding: 6px;
+    font-size: 12px;
+    width: 180px;
+}
+
+/* button styling for usability */
+button {
+    padding: 6px 14px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/*to fit within bounds */
+canvas {
+    width: 100%;
+    max-width: 2000px;
+    max-height: 1000px;
+}
